@@ -163,6 +163,8 @@ contract MultiSigWallet is AccessControl {
 
         signers.push(_signer);
 
+        emit GrantSigner(_signer);
+
     }
 
     function revokeSigner(address _signer) external onlyRole(ADMIN_ROLE) {
@@ -209,5 +211,8 @@ contract MultiSigWallet is AccessControl {
     event ConfirmTransaction(address indexed signer, uint256 indexed txIndex);
     event RevokeConfirmation(address indexed signer, uint256 indexed txIndex);
     event ExecuteTransaction(address indexed signer, uint256 indexed txIndex);
+
+    event GrantSigner(address indexed signer);
     event RevokeSigner(address indexed signer);
+
 }
