@@ -29,5 +29,8 @@
     "hardhat-abi-exporter": "^2.10.1",
     "hardhat-contract-sizer": "2.8.0",
     "hardhat-watcher": "^2.5.0"
+  },
+  "devDependencies": {
+    "hardhat-gas-reporter": "^1.0.9"
   }
 }

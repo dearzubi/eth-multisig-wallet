@@ -4,8 +4,12 @@ require("@nomiclabs/hardhat-etherscan")
 require('hardhat-contract-sizer')
 require("hardhat-watcher")
 require('hardhat-abi-exporter')
+require("hardhat-gas-reporter");
 
 module.exports = {
+  gasReporter: {
+    enabled: true
+  },
   abiExporter: {
     path: "./abis",
     clear: true,
